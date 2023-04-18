@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+	<title>Login</title>
+</head>
+
+<body class="h-100 d-flex flex-column justify-content-between">
+	<!-- Header- start -->
+	<header class="py-2">
+		<div class="container-fluid px-3">
+			<div class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+				<a href="../index.html">
+					<img src="/images/logo.png" alt="Site logo" width="250" />
+				</a>
+				<div class="fs-5 ms-auto now-date-js">
+					<span class="now-day-js"></span>
+					<span class="now-hour-js fw-bold"></span>
+					<span class="now-minute-js fw-bold"></span>
+					<span class="now-second-js fw-bold"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main start -->
+	<main class="flex-grow-1 py-5">
+		<div class="container-fluid px-3">
+			<div class="row">
+				<!-- Login img -->
+				<div class="col-12 col-md-6">
+					<img class="img-fluid" src="/images/login-image.png" alt="img">
+				</div>
+				<!-- Login form -->
+				<div class="col-12 col-md-6 mt-5">
+					<div class="row">
+						<div class="col-11 col-sm-9 col-md-10 col-xl-8 mx-auto shadow rounded-4 p-4">
+							<h2 class="fs-4">Kirish formasi</h2>
+							<p>Ro'yhatdan o'tish vaqtida foydalangan telefon raqamingiz va parolingizdan foydalanib tizimga kiring.
+							</p>
+							<form method="post">
+								{% csrf_token %}
+
+								<div class="form-floating mb-3">
+									<input type="tel" name="username" class="form-control" id="floatingInput" placeholder="Telefon" required>
+									<label for="floatingInput">Telefon</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Parol *"
+										required>
+									<label for="floatingPassword">Parol *</label>
+								</div>
+								<button class="btn btn-primary" type="submit">Kirish</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer start -->
+	<footer class="py-4 border-top border-2">
+		<div class="container-fluid px-3">
+			<div class="d-flex justify-content-between align-items-center">
+				<span>RoboCode IT Academy 2023</span>
+
+				<div class="icons d-flex align-items-center">
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/facebook-icon.png" alt="icon" />
+					</a>
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/instagram-icon.png" alt="icon" />
+					</a>
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/telegram-icon.png" alt="icon" />
+					</a>
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/youtube-icon.png" alt="icon" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

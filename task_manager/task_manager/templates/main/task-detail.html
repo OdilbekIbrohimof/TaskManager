@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<title>Task detail</title>
+	</head>
+	<body class="h-100 d-flex flex-column justify-content-between">
+		<!-- Header- start -->
+		<header class="py-2">
+			<div class="container-fluid px-3">
+				<div
+					class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap"
+				>
+					<a href="./index.html">
+						<img src="./images/logo.png" alt="Site logo" width="250" />
+					</a>
+					<div class="fs-5 ms-auto now-date-js">
+						<span class="now-day-js"></span>
+						<span class="now-hour-js fw-bold"></span>
+						<span class="now-minute-js fw-bold"></span>
+						<span class="now-second-js fw-bold"></span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main start -->
+		<main class="flex-grow-1 mb-5">
+			<div class="container-fluid px-3">
+				<!-- Navigation bar va info qismini o'rab turuvchi -->
+				<div class="row">
+					<!-- Navigation bar -->
+					<div
+						class="col-12 col-md-3 d-flex d-md-block flex-wrap justify-content-between"
+					>
+						<a
+							class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+							href="./index.html"
+						>
+							<img src="./images/topshiriq-icon.png" alt="icon" width="25" />
+							<span class="fs-5 mx-3">Topshiriqlar</span>
+						</a>
+						<a
+							class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+							href="./chat.html"
+						>
+							<img src="./images/chat-icon.png" alt="icon" width="25" />
+							<span class="fs-5 mx-3">Chat</span>
+						</a>
+						<a
+							class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-primary"
+							href="./task-detail.html"
+						>
+							<img src="./images/jamoa-icon.png" alt="icon" width="25" />
+							<span class="fs-5 mx-3">Jamoa</span>
+						</a>
+						<a
+							class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+							href="./calendar.html"
+						>
+							<img src="./images/calendar-icon.png" alt="icon" width="25" />
+							<span class="fs-5 mx-3">Kalendar</span>
+						</a>
+						<a
+							class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black fw-medium"
+							href="./author-pages/profile.html"
+						>
+							<img src="./images/user-icon.png" alt="icon" width="25" />
+							<span class="fs-5 mx-3">Chala Developer</span>
+						</a>
+					</div>
+
+					<!-- Info bo'limi -->
+					<div class="shadow rounded-4 col-12 col-md-9 mt-4 p-3">
+						<!-- Gurux malumotlari -->
+						<div class="row justify-content-end">
+							<div
+								class="col-6 col-sm-4 col-lg-3 my-2 d-flex justify-content-center align-items-center"
+							>
+								<img src="./images/group-logo.png" alt="logo" width="25" />
+								<p class="m-0 ms-2">
+									<span class="fw-bold">Designers</span> guruxi
+								</p>
+							</div>
+
+							<div
+								class="col-6 col-sm-4 col-lg-3 my-2 d-flex justify-content-center align-items-center"
+							>
+								<img
+									src="./images/cross-circle-icon.png"
+									alt="logo"
+									width="20"
+								/>
+								<p class="m-0 ms-2">Bajarilmagan</p>
+							</div>
+
+							<div
+								class="col-6 col-sm-4 col-lg-3 my-2 d-flex justify-content-center align-items-center"
+							>
+								<img src="./images/users-logo.png" alt="logo" width="20" />
+								<p class="m-0 ms-2">3 kishi bajarmoqda</p>
+							</div>
+							<div class="col-6 col-sm-4 col-lg-3 my-2 text-center">
+								31 mart 2023
+							</div>
+						</div>
+
+						<div class="row mt-5">
+							<!-- Berilgan task haqida ma'lumotlar col-8 -->
+							<div class="col-12 col-lg-8">
+								<!-- Sayt rasmi va yulduzchalar soni -->
+								<div
+									class="d-flex justify-content-between align-items-start flex-wrap"
+								>
+									<img src="./images/template-img.png" alt="img" />
+									<div class="d-flex align-items-center">
+										<img src="./images/star.png" alt="icon" width="20" />
+										<span class="fs-2 fw-bold ms-1">10</span>
+									</div>
+								</div>
+								<!-- Site title -->
+								<h2 class="fs-4 my-4">kun.uz bosh sahifasi dizaynini qilish</h2>
+								<!-- Site info -->
+								<p>
+									Lorem ipsum dolor sit amet consectetur. Nulla a risus
+									convallis duis. Sit tempus imperdiets volutpat. Integer ipsum
+									massa egestas id dictum urna. Varius pharetra consectetur
+									cursus id consequat elementum. Tempor mattis mi in adipiscing
+									nulla nulla morbi lacus ut. Habitant aenean tristique blandit
+									ante netus aliquam arcu elit duis.
+								</p>
+								<!-- Deadline -->
+								<div>
+									Topshirish sanasi: <span class="fw-bold">21-aprel 2023</span>
+								</div>
+								<!-- Button -->
+								<button
+									class="btn btn-primary mt-3"
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+								>
+									Bajarish
+								</button>
+							</div>
+
+							<div class="col-12 col-lg-4 ps-lg-5 mt-3">
+								<!-- Group title -->
+								<h4>Gurux a'zolari</h4>
+								<!-- Group members -->
+								<div class="d-flex my-3">
+									<img
+										src="./images/harry.png"
+										alt="img"
+										width="40"
+										height="40"
+									/>
+									<div class="ms-3">
+										<h6 class="m-0 fs-6">Harry Maguaer</h6>
+										<div>
+											<img
+												src="./images/correct-icon-mini.png"
+												alt="icon"
+												width="15"
+											/>
+											<span class="fs-6">Topshirdi</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex my-3">
+									<img
+										src="./images/harry.png"
+										alt="img"
+										width="40"
+										height="40"
+									/>
+									<div class="ms-3">
+										<h6 class="m-0 fs-6">Harry Maguaer</h6>
+										<div>
+											<img
+												src="./images/correct-icon-mini.png"
+												alt="icon"
+												width="15"
+											/>
+											<span class="fs-6">Topshirdi</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex my-3">
+									<img
+										src="./images/harry.png"
+										alt="img"
+										width="40"
+										height="40"
+									/>
+									<div class="ms-3">
+										<h6 class="m-0 fs-6">Harry Maguaer</h6>
+										<div>
+											<img
+												src="./images/correct-icon-mini.png"
+												alt="icon"
+												width="15"
+											/>
+											<span class="fs-6">Topshirdi</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer start -->
+		<footer class="py-4 border-top border-2">
+			<div class="container-fluid px-3">
+				<div class="d-flex justify-content-between align-items-center">
+					<span>RoboCode IT Academy 2023</span>
+
+					<div class="icons d-flex align-items-center">
+						<a class="text-decoration-none mx-2" href="#">
+							<img src="./images/facebook-icon.png" alt="icon" />
+						</a>
+						<a class="text-decoration-none mx-2" href="#">
+							<img src="./images/instagram-icon.png" alt="icon" />
+						</a>
+						<a class="text-decoration-none mx-2" href="#">
+							<img src="./images/telegram-icon.png" alt="icon" />
+						</a>
+						<a class="text-decoration-none mx-2" href="#">
+							<img src="./images/youtube-icon.png" alt="icon" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="exampleModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel">
+							Topshiriqni yuborish
+						</h1>
+					</div>
+					<div class="modal-body">
+						<form method="post">
+							<select class="form-select" name="group_name">
+								<option value="dizaynerlar">Dizaynerlar</option>
+								<option value="dizaynerlar">Dizaynerlar</option>
+								<option value="dizaynerlar">Dizaynerlar</option>
+							</select>
+							<input class="form-control mt-3" type="file" />
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-primary"
+							data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop"
+						>
+							Yuborish
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="staticBackdrop"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="staticBackdropLabel">
+							Topshiriq moderatorga yuborildi!
+						</h1>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						Moderator yoki TeamLead ishingizni baholashi bilan sizga ballar
+						qo’shiladi.
+						<br />
+						<br />
+						Topshiriq uchun ball berilgan vaqtda topshiriqni yakunlangan vaqti
+						sifatida uni yuborilgan vaqti olinadi.
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

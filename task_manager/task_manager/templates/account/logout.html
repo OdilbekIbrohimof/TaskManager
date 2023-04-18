@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+	<title>Logout</title>
+</head>
+
+<body class="h-100 d-flex flex-column justify-content-between">
+	<!-- Header- start -->
+	<header class="py-2">
+		<div class="container-fluid px-3">
+			<div class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+				<a href="/">
+					<img src="/images/logo.png" alt="Site logo" width="250" />
+				</a>
+				<div class="fs-5 ms-auto now-date-js">
+					<span class="now-day-js"></span>
+					<span class="now-hour-js fw-bold"></span>
+					<span class="now-minute-js fw-bold"></span>
+					<span class="now-second-js fw-bold"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main start -->
+	<main class="flex-grow-1">
+		<div class="container-fluid px-3">
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-10 bg-info bg-opacity-25 py-3 py-lg-5 rounded-top-5">
+					<div class="d-flex justify-content-around align-items-start bg-light rounded-5 px-3 py-3 py-lg-5 mb-5">
+						<div class="row flex-column flex-sm-row">
+							<div class="col-6 col-sm-3">
+								<img class="img-fluid" src="/images/logout-img.png" alt="img" />
+							</div>
+							<div class="col-12 col-sm-9 p-2 p-lg-5">
+								<p class="fw-medium fs-5">
+									Siz tizimdan chiqmoqchisiz. Tizimdan faqat royhatdan o'tgan
+									holatda foydalanish mumkin. Agar rostdan ham chiqmoqchi
+									bo0'lsangiz u holda biz sizni kutib qolamiz.
+								</p>
+								<a class="text-decoration-none fs-5 fw-medium" href="/">Chiqish</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- Footer start -->
+	<footer class="py-4 border-top border-2">
+		<div class="container-fluid px-3">
+			<div class="d-flex justify-content-between align-items-center">
+				<span>RoboCode IT Academy 2023</span>
+
+				<div class="icons d-flex align-items-center">
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/facebook-icon.png" alt="icon" />
+					</a>
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/instagram-icon.png" alt="icon" />
+					</a>
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/telegram-icon.png" alt="icon" />
+					</a>
+					<a class="text-decoration-none mx-2" href="#">
+						<img src="/images/youtube-icon.png" alt="icon" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

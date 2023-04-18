@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 300px;
+  background-color: rgb(220, 238, 248);
+  border-radius: 10px;
+}
+
+.wrapper .box {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev-next-icon {
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(225, 225, 225);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prev-next-icon:hover {
+  background-color: rgb(150, 181, 194);
+}
+
+.calendar {
+  padding: 20px;
+}
+
+
+.calendar .weeks li {
+  font-weight: 600;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar ul li {
+  position: relative;
+  width: calc(100% / 7);
+}
+
+.calendar .days li {
+  margin-top: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.days li.inactive {
+  color: rgb(160, 160, 160);
+}
+
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.days li:hover::before {
+  background-color: rgb(160, 163, 216);
+}
+
+.days li:hover {
+  color: white;
+}
+
+.days li.active {
+  color: white;
+}
+
+.days li.active::before {
+  background-color: rgb(77, 115, 128);
+}

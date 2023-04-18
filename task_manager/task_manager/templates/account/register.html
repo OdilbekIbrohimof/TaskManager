@@ -1,0 +1,193 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <title>Register</title>
+</head>
+
+<body class="h-100 d-flex flex-column justify-content-between">
+
+  <!-- Header- start -->
+  <header class="py-2">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+        <a href="/">
+          <img src="/images/logo.png" alt="Site logo" width="250" />
+        </a>
+        <div class="fs-5 ms-auto now-date-js">
+          <span class="now-day-js"></span>
+          <span class="now-hour-js fw-bold"></span>
+          <span class="now-minute-js fw-bold"></span>
+          <span class="now-second-js fw-bold"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main start -->
+  <main class="flex-grow-1 py-5">
+    <div class="container-fluid px-3">
+      <div class="row">
+        <!-- Carousel -->
+        <div class="col-12 col-md-6">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-block w-100 text-center px-0 px-lg-5">
+                  <img src="/images/register-img1.png" class="w-75" alt="img">
+                  <p class="px-0 px-lg-5 fw-bold fs-5 pt-5">Dasturlashdagi bilimlaringizni Topshiriqlar Menejeri orqali
+                    topshiriqlarni bajarish bilan mustahkamlang.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 text-center px-0 px-lg-5">
+                  <img src="/images/register-img2.png" class="w-75" alt="img">
+                  <p class="px-0 px-lg-5 fw-bold fs-5 pt-5">Kreativ fikrlash , mantiqiy fikrlash va to’qnash keladigan
+                    muammolarga yechim topishdagi ko’nikmalaringizni oshiring.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 text-center px-0 px-lg-5">
+                  <img src="/images/register-img3.png" class="w-75" alt="img">
+                  <p class="px-0 px-lg-5 fw-bold fs-5 pt-5">Bizning topshiriqlar fikrlash doirangizni kengaytiradi va
+                    siz oldin ko’rmagan narsalaringizni ham ko’ra boshlaysiz.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Register box -->
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-11 col-md-10 col-lg-8 col-xxl-6 shadow p-4 rounded-4 mx-auto">
+              <h2 class="fs-4">Ro’yhatdan o’tish formasi </h2>
+              <!-- <form method="post" autocomplete="off">
+                {% csrf_token %}
+
+                <div class="form-floating my-3">
+                  <input type="text" name="first_name" class="form-control" id="floatingInput"
+                    placeholder="Ism & Familya" required>
+                  <label for="floatingInput">Ism</label>
+                </div>
+
+                <div class="form-floating my-3">
+                  <input type="text" name="last_name" class="form-control" id="floatingInput"
+                    placeholder="Ism & Familya" required>
+                  <label for="floatingInput">Familya</label>
+                </div>
+                <div class="form-floating my-3">
+                  <input type="date" name="birthday" class="form-control" id="floatingPassword"
+                    placeholder="Tug’ilgan sana" required>
+                  <label for="floatingPassword">Tug’ilgan sana</label>
+                </div>
+                <div class="form-floating my-3">
+                  <input type="radio" name="direction" class="form-control" id="floatingInput" placeholder="Yo’nalish"
+                    required>
+                  <label for="floatingInput">Yo’nalish</label>
+                </div>
+                <div class="form-floating my-3">
+                  <input type="number" name="phone_number" class="form-control" id="floatingPassword"
+                    placeholder="Telefon *" required>
+                  <label for="floatingPassword">Telefon *</label>
+                </div>
+                <div class="form-floating my-3">
+                  <input type="password" name="password1" class="form-control" id="floatingInput" placeholder="Parol *"
+                    required>
+                  <label for="floatingInput">Parol *</label>
+                </div>
+                <div class="form-floating my-3">
+                  <input type="password" name="password2" class="form-control" id="floatingPassword"
+                    placeholder="Parol takroran *" required>
+                  <label for="floatingPassword">Parol takroran *</label>
+                </div>
+                <button class="btn btn-primary" type="submit">Ro’yhatdan o’tish</button>
+              </form> -->
+
+              <form action="" method="POST" id="registration_form">
+                {% csrf_token %}
+
+                {{form.as_p}}
+
+                {% if messages %}
+                {% for message in messages %}
+                <h6{% if message.tags %} class="{{message.tags}}" {% endif %}>
+                  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} {% endif %}{{ message }}
+                  {% endfor %}
+                  <script>
+                    let err_msg = document.querySelector('.error')
+                    err_msg.style = 'color:red;'
+
+                    setTimeout(() => {
+                      err_msg.remove()
+                    }, 3300);
+                  </script>
+                  </h6>
+                  {% endif %}
+
+                  <button type="submit" class="btn btn-primary">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer start -->
+  <footer class="py-4 border-top border-2">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <span>RoboCode IT Academy 2023</span>
+
+        <div class="icons d-flex align-items-center">
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/facebook-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/instagram-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/telegram-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/youtube-icon.png" alt="icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+  <script>
+    document.getElementById('id_first_name').className = 'form-control'
+    document.getElementById('id_last_name').className = 'form-control'
+    document.getElementById('id_username').className = 'form-control'
+    document.getElementById('id_birthday').className = 'form-control'
+    document.getElementById('id_direction').className = 'form-control'
+    document.getElementById('id_phone_number').className = 'form-control'
+    document.getElementById('id_password1').className = 'form-control'
+    document.getElementById('id_password2').className = 'form-control'
+
+    document.querySelector('#id_birthday').type = 'date'
+  </script>
+
+  <style>
+    ul,
+    .helptext {
+      display: none;
+    }
+  </style>
+</body>
+
+</html>

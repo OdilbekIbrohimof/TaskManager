@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+  <title>Task list</title>
+</head>
+
+<body class="h-100 d-flex flex-column justify-content-between">
+  <!-- Header start -->
+  <header class="py-2">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
+          <a href="/">
+            <img src="/images/logo.png" alt="Site logo" width="250" />
+          </a>
+          <ul class="nav-list d-flex list-unstyled m-0 m-auto my-3 my-sm-0">
+            <li class="ms-md-5 mx-1 mx-sm-3">
+              <a class="fs-5 text-decoration-none text-black fw-medium border-bottom border-2 border-dark"
+                href="#">Barchasi</a>
+            </li>
+            <li class="ms-md-5 mx-1 mx-sm-3">
+              <a class="fs-5 text-decoration-none text-black-50 fw-medium" href="#">Yakunlanganlari</a>
+            </li>
+            <li class="ms-md-5 mx-1 mx-sm-3">
+              <a class="fs-5 text-decoration-none text-black-50 fw-medium" href="#">Bajarilmoqda</a>
+            </li>
+          </ul>
+        </div>
+        <div class="fs-5 ms-auto now-date-js">
+          <span class="now-day-js"></span>
+          <span class="now-hour-js fw-bold"></span>
+          <span class="now-minute-js fw-bold"></span>
+          <span class="now-second-js fw-bold"></span>
+        </div>
+
+        {% if user.is_authenticated %}
+        <div></div>
+        {% else %}
+        <a href="{% url 'account:login' %}" class="btn btn-primary ms-5 me-3">Tizimga kirish</a>
+        <a href="{% url 'account:register' %}" class="btn btn-primary">Registratsiya</a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <!-- Main start -->
+  <main class="flex-grow-1">
+    <div class="container-fluid px-3">
+      <div class="row">
+        <div class="col-12 col-md-3 d-flex d-md-block flex-wrap justify-content-between">
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-primary" href="/">
+            <img src="/images/topshiriq-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Topshiriqlar</span>
+          </a>
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50" href="/chat/">
+            <img src="/images/chat-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Chat</span>
+          </a>
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+            href="./task-detail.html">
+            <img src="/images/jamoa-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Jamoa</span>
+          </a>
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+            href="./calendar.html">
+            <img src="/images/calendar-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Kalendar</span>
+          </a>
+          {% if user.is_authenticated %}
+
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black fw-medium"
+            href="/account/profile/">
+            <img src="/images/user-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">{{request.user.first_name}}</span>
+          </a>
+          {% endif %}
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <!-- Footer start -->
+        <footer class="py-4 border-top border-2">
+          <div class="container-fluid px-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <span>RoboCode IT Academy 2023</span>
+
+              <div class="icons d-flex align-items-center">
+                <a class="text-decoration-none mx-2" href="#">
+                  <img src="images/facebook-icon.png" alt="icon" />
+                </a>
+                <a class="text-decoration-none mx-2" href="#">
+                  <img src="images/instagram-icon.png" alt="icon" />
+                </a>
+                <a class="text-decoration-none mx-2" href="#">
+                  <img src="images/telegram-icon.png" alt="icon" />
+                </a>
+                <a class="text-decoration-none mx-2" href="#">
+                  <img src="images/youtube-icon.png" alt="icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

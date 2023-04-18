@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <title>Chat</title>
+</head>
+<body class="h-100 d-flex flex-column justify-content-between">
+  <!-- Header start -->
+  <header class="py-2">
+    <div class="container-fluid px-3">
+      <div
+        class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap"
+      >
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="Site logo" width="250" />
+        </a>
+        <div class="fs-5 ms-auto now-date-js">
+          <span class="now-day-js"></span>
+          <span class="now-hour-js fw-bold"></span>
+          <span class="now-minute-js fw-bold"></span>
+          <span class="now-second-js fw-bold"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header end -->
+  <!-- Main start -->
+  <main class="flex-grow-1">
+    <div class="container-fluid px-3">
+      <!-- Navigation bar va info qismini o'rab turuvchi -->
+      <div class="row h-100">
+        <!-- Navigation bar -->
+        <div
+          class="col-12 col-md-3 d-flex d-md-block flex-wrap justify-content-between"
+        >
+          <a
+            class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+            href="./index.html"
+          >
+            <img src="./images/topshiriq-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Topshiriqlar</span>
+          </a>
+          <a
+            class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-primary"
+            href="./chat.html"
+          >
+            <img src="./images/chat-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Chat</span>
+          </a>
+          <a
+            class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+            href="./task-detail.html"
+          >
+            <img src="./images/jamoa-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Jamoa</span>
+          </a>
+          <a
+            class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+            href="./calendar.html"
+          >
+            <img src="./images/calendar-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Kalendar</span>
+          </a>
+          <a
+            class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black fw-medium"
+            href="./author-pages/profile.html"
+          >
+            <img src="./images/user-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Chala Developer</span>
+          </a>
+        </div>
+
+        <!-- Info bo'limi -->
+        <div class="col-12 col-md-9 rounded-top-5 bg-opacity-25 bg-info p-2 mt-5 m-md-0">
+          <div class="row flex-column-reverse flex-lg-row">
+            <div class="col-12 col-lg-8">
+              <div class="row mb-5">
+                <!-- Left message box -->
+                <div class="col-10 d-flex align-items-end mb-5 position-relative left-message">
+                  <img class="me-2" src="./images/harry.png" alt="img">
+                  <div>
+                    <div class="bg-white rounded-4 p-3">
+                      <h6 class="text-primary">Chala developer</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur. Risus sagittis quis tempus pulvinar sed porta. Et ullamcorper sit sit consectetur viverra ultrices rhoncus massa.</p>
+                      <div>
+                        <img src="./images/left-arrow.png" alt="icon">
+                        <a href="#" class="text-decoration-none">Javob yozish</a>
+                      </div>
+                    </div>
+                    <div class="position-absolute d-flex align-items-center py-1 ps-1 text-black-50">
+                      <p class="m-0 me-3 fs-6">3 soat oldin</p>
+                      <div class="d-flex align-items-center">
+                        <img src="./images/arrow-circle-up.png" alt="icon" width="15">
+                        <p class="m-0 ms-1">44</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right message box -->
+                <div class="col-10 d-flex align-items-end mb-5 ms-auto position-relative right-message">
+                  <img class="me-2" src="./images/harry.png" alt="img">
+                  <div>
+                    <div class="bg-white rounded-4 p-3">
+                      <div>
+                        <img src="./images/left-arrow.png" alt="icon">
+                        <a href="#" class="text-decoration-none text-black-50">Harry Potter</a>
+                      </div>
+                      <h6 class="text-primary">Chala developer</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur. Risus sagittis quis tempus pulvinar sed porta. Et ullamcorper sit sit consectetur viverra ultrices rhoncus massa.</p>
+                    </div>
+                    <div class="position-absolute d-flex align-items-center py-1 ps-1 text-black-50">
+                      <p class="m-0 me-3 fs-6">1 soat oldin</p>
+                      <div class="d-flex align-items-center">
+                        <img src="./images/arrow-circle-up.png" alt="icon" width="15">
+                        <p class="m-0 ms-1">44</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <form class="position-sticky bottom-0" method="post">
+                <textarea class="form-control w-50 rounded-3 mb-2" style="resize: none;" cols="50" rows="2" placeholder="xabar yuborish..."></textarea>
+                <button class="btn btn-primary" type="submit">Yuborish</button>
+              </form>
+            </div>
+
+            <!--  -->
+            <div class="col-12 col-lg-4">
+              <!-- Online users box -->
+              <div class="bg-light rounded-4 shadow p-3 my-3">
+                <h5 class="fw-bold fs-5">Xozir onlayn : <span>3 kishi</span></h5>
+                <!-- Online users -->
+                <div class="d-flex align-items-center my-2">
+                  <img src="./images/harry.png" alt="img" width="40">
+                  <div class="ms-2">
+                    <h6 class="m-0 fw-bold">Harry Maguaer</h6>
+                    <span>Designers</span>
+                  </div>
+                </div>
+                
+                <div class="d-flex align-items-center my-2">
+                  <img src="./images/harry.png" alt="img" width="40">
+                  <div class="ms-2">
+                    <h6 class="m-0 fw-bold">Harry Maguaer</h6>
+                    <span>Designers</span>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center my-2">
+                  <img src="./images/harry.png" alt="img" width="40">
+                  <div class="ms-2">
+                    <h6 class="m-0 fw-bold">Harry Maguaer</h6>
+                    <span>Designers</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Final assignments -->
+              <div class="bg-light rounded-4 shadow p-3 my-3">
+                <h5 class="fw-bold fs-5">So’nggi topshiriqlar</h5>
+                <!-- Topshiriqlar -->
+                <div class="border-1 border-dark border-bottom py-2">
+                  <p class="m-0 fw-medium">Bootstrapda sign in va sign up formalar tayyorlash</p>
+                  <div class="d-flex align-items-center">
+                    <img src="./images/refresh-circle.png" alt="icon" width="18">
+                    <span class="ms-1">Bajarilmoqda</span>
+                  </div>
+                </div>
+                <!-- ========================== -->
+                <div class="border-1 border-dark border-bottom py-2">
+                  <p class="m-0 fw-medium">Bootstrapda sign in va sign up formalar tayyorlash</p>
+                  <div class="d-flex align-items-center">
+                    <img src="./images/refresh-circle.png" alt="icon" width="18">
+                    <span class="ms-1">Bajarilmoqda</span>
+                  </div>
+                </div>
+                <!-- ========================== -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Main end -->
+  <!-- Footer start -->
+  <footer class="py-4 border-top border-2">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <span>RoboCode IT Academy 2023</span>
+
+        <div class="icons d-flex align-items-center">
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="./images/facebook-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="./images/instagram-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="./images/telegram-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="./images/youtube-icon.png" alt="icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

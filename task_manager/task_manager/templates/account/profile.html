@@ -1,0 +1,505 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+  <title>Profile</title>
+</head>
+
+<body class="h-100 d-flex flex-column justify-content-between">
+  <!-- Header- start -->
+  <header class="py-2">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+        <a href="/">
+          <img src="/images/logo.png" alt="Site logo" width="250" />
+        </a>
+        <div class="fs-5 ms-auto now-date-js">
+          <span class="now-day-js"></span>
+          <span class="now-hour-js fw-bold"></span>
+          <span class="now-minute-js fw-bold"></span>
+          <span class="now-second-js fw-bold"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main start -->
+  <main class="flex-grow-1 mb-5">
+    <div class="container-fluid px-3">
+      <!-- Navigation bar va info qismini o'rab turuvchi -->
+      <div class="row">
+        <!-- Navigation bar -->
+        <div class="col-12 col-md-3 d-flex d-md-block flex-wrap justify-content-between">
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50" href="/">
+            <img src="/images/topshiriq-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Topshiriqlar</span>
+          </a>
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50" href="/chat/">
+            <img src="/images/chat-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Chat</span>
+          </a>
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+            href="../task-detail.html">
+            <img src="/images/jamoa-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Jamoa</span>
+          </a>
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-black-50"
+            href="../calendar.html">
+            <img src="/images/calendar-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">Kalendar</span>
+          </a>
+          <a class="d-flex align-items-center my-2 my-md-5 px-3 text-decoration-none text-primary fw-medium"
+            href="/account/profile/">
+            <img src="/images/user-icon.png" alt="icon" width="25" />
+            <span class="fs-5 mx-3">{{request.user.first_name}}</span>
+          </a>
+        </div>
+
+        <!-- Info bo'limi -->
+        <div class="col-12 col-md-9 p-2">
+          <div class="row flex-column-reverse flex-xl-row">
+            <div class="col-12 col-xl-8">
+              <div class="row">
+                <div class="p-2 rounded-4 d-flex justify-content-around align-items-center shadow bg-body-tertiary">
+                  <!--  -->
+                  <div class="d-flex flex-column align-items-center">
+                    <img src="/images/star.png" alt="icon" />
+                    <b class="fs-3">612</b>
+                    <p class="m-0">RoboPoint</p>
+                  </div>
+                  <!--  -->
+                  <div class="d-flex flex-column align-items-center">
+                    <img src="/images/coin-icon.png" alt="icon" />
+                    <b class="fs-3">60.1</b>
+                    <p class="m-0">RoboCoin</p>
+                  </div>
+                  <!--  -->
+                  <div class="d-flex flex-column align-items-center">
+                    <img src="/images/emote-smile.png" alt="icon" />
+                    <b class="fs-3">4.9</b>
+                    <p class="m-0">Reyting</p>
+                  </div>
+                  <!--  -->
+                  <div class="d-flex flex-column align-items-center">
+                    <img src="/images/trending-up.png" alt="icon" />
+                    <b class="fs-3">23<span class="fs-5">%</span></b>
+                    <p class="m-0">O’sish</p>
+                  </div>
+                  <!--  -->
+                </div>
+                <!-- ========================== -->
+                <div
+                  class="col-12 d-flex justify-content-between align-items-center flex-wrap shadow bg-body-tertiary rounded-4 p-3 my-3">
+                  <div class="my-3 mx-1">
+                    <b class="fs-2">36ta</b>
+                    <p class="m-0">Berilgan topshiriqlar</p>
+                  </div>
+                  <div class="my-3 mx-1">
+                    <b class="fs-2">33ta</b>
+                    <p class="m-0">Yakunlangan topshiriqlar</p>
+                  </div>
+                  <div class="my-3 mx-1">
+                    <b class="fs-2">72%</b>
+                    <p class="m-0">O’zlashtirish darajasi</p>
+                  </div>
+                  <div class="my-3 mx-1">
+                    <b class="fs-2">612ball</b>
+                    <p class="m-0">Jami to’plangan ballar</p>
+                  </div>
+                </div>
+                <!-- ========================== -->
+                <div class="col-8 shadow rounded-4 my-2 p-3">
+                  <div class="d-flex align-items-center">
+                    <b class="fs-1">72%</b>
+                    <p class="m-0 ms-2">
+                      Joriy oydagi o’zlashtirish ko’rsatkichi
+                    </p>
+                  </div>
+                  <img class="w-100" src="/images/chart.png" alt="img" />
+                </div>
+                <!-- ========================== -->
+
+                <!-- So'ngi olingan ballar -->
+                <div class="mt-3">
+                  <h2 class="fs-4">So’nggi olingan ballar</h2>
+
+                  <div>
+                    <!-- ======================= -->
+                    <div
+                      class="d-flex justify-content-between align-items-center flex-wrap shadow px-4 py-2 rounded-4 my-3">
+                      <p class="m-0 py-2">Tuzsiz semechka chaqish</p>
+                      <div class="d-flex">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <img src="/images/correct-icon-mini.png" alt="icon" />
+                          <span class="ms-2">Yakunlangan</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center ms-5">
+                          <img src="/images/star.png" alt="icon" />
+                          <span class="ms-2">6</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ======================= -->
+                    <div
+                      class="d-flex justify-content-between align-items-center flex-wrap shadow px-4 py-2 rounded-4 my-3">
+                      <p class="m-0 py-2">
+                        kun.uz bosh sahifasi dizaynini qilish
+                      </p>
+                      <div class="d-flex">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <img src="/images/correct-icon-mini.png" alt="icon" />
+                          <span class="ms-2">Yakunlangan</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center ms-5">
+                          <img src="/images/star.png" alt="icon" />
+                          <span class="ms-2">6</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ======================= -->
+                    <div
+                      class="d-flex justify-content-between align-items-center flex-wrap shadow px-4 py-2 rounded-4 my-3">
+                      <p class="m-0 py-2">
+                        "Ashnaqada hayot" ma'nosini bilib kelish
+                      </p>
+                      <div class="d-flex">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <img src="/images/correct-icon-mini.png" alt="icon" />
+                          <span class="ms-2">Yakunlangan</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center ms-5">
+                          <img src="/images/star.png" alt="icon" />
+                          <span class="ms-2">6</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ======================= -->
+                  </div>
+                </div>
+                <!-- ========================== -->
+
+                <!-- Yakunlangan loyihalar -->
+                <div class="mt-5">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h2 class="fs-4 me-3">
+                      Yakunlangan loyihalarim : <span>2</span> ta
+                    </h2>
+                    <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Loyiha qo’shish
+                    </button>
+                  </div>
+
+                  <div class="d-flex flex-wrap">
+                    <div class="d-flex flex-column align-items-start m-2">
+                      <a class="text-decoration-none fs-5 fw-bold my-1" href="#">Zoodmall clone</a>
+                      <img src="/images/zoodmal.png" alt="img" />
+                    </div>
+
+                    <div class="d-flex flex-column align-items-start m-2">
+                      <a class="text-decoration-none fs-5 fw-bold my-1" href="#">Zoodmall clone</a>
+                      <img src="/images/zoodmal.png" alt="img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Account box -->
+            <div class="col-12 col-xl-4 mb-4 mb-xl-0">
+              <!-- =====Edit and profile img====== -->
+              <div class="border-bottom px-3">
+                <div class="d-flex flex-column align-items-center">
+                  {% if user.img %}
+                  <img src="{{request.user.img.url}}" alt="img" width="100"
+                    style="border-radius: 50%; margin-bottom: 15px;" />
+                  {% else %}
+                  <img src="/images/harry.png" alt="img" width="100" style="margin-bottom: 15px;" />
+                  {% endif %}
+                  <a href="{% url 'account:profile_edit' request.user.id %}">
+                    <img src="/images/edit-icon.png" alt="icon" />
+                    <span>Tahrirlash</span></a>
+                </div>
+
+                <h2 class="fs-6 m-0 mt-3 d-flex justify-content-between">
+                  <b>{{request.user.first_name}} {{request.user.last_name}}</b>
+                  <span class="text-black-50">online</span>
+                </h2>
+                <h6 style="font-size: 13px; margin-top: 5px">
+                  @{{request.user.username}}
+                </h6>
+                <p class="m-0">{{request.user.direction}}</p>
+              </div>
+              <!-- =====Info====== -->
+              <div class="row">
+                <div class="row">
+                  <div class="col-6 text-end">
+                    <p class="m-0 my-1">Tug’ilgan sana:</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="m-0 my-1 text-primary">
+                      {{request.user.birthday}}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6 text-end">
+                    <p class="m-0 my-1">Yo’nalish:</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="m-0 my-1 text-primary">
+                      {{request.user.direction}}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6 text-end">
+                    <p class="m-0 my-1">Guruhi:</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="m-0 my-1 text-primary">Designers A</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6 text-end">
+                    <p class="m-0 my-1">Tajriba va bilim:</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="m-0 my-1 text-primary">UI&UX dizayner, 6 oy</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6 text-end">
+                    <p class="m-0 my-1">Profil turi:</p>
+                  </div>
+                  <div class="col-6">
+                    {% if request.user.is_superuser %}
+                    <p class="m-0 my-1 text-primary">Super foydalanuvchi</p>
+                    {% else %}
+                    <p class="m-0 my-1 text-primary">Oddiy foydalanuvchi</p>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6 text-end">
+                    <p class="m-0 my-1">Ijtimoiy tarmoqlari:</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="m-0 my-1 d-flex align-items-center">
+                      <a class="mx-2"
+                        href="{% if request.user.telegram_link %} {{request.user.telegram_link}} {% endif %}"><img
+                          src="/images/telegram-primary.png" alt="icon" /></a>
+                      <a class="mx-2"
+                        href="{% if request.user.telegram_link %} {{request.user.instagram_link}} {% endif %}"><img
+                          src="/images/instagram-primary.png" alt="icon" /></a>
+                      <a class="mx-2"
+                        href="{% if request.user.telegram_link %} {{request.user.facebook_link}} {% endif %}"><img
+                          src="/images/facebook-primary.png" alt="icon" /></a>
+                    </p>
+                  </div>
+                </div>
+
+                <a href="{% url 'account:logout' %}" class="btn btn-primary"
+                  style="width: 70%; margin: auto; margin-top: 15px;">Akkauntdan chiqish</a>
+              </div>
+              <!-- =====Tasks====== -->
+              <div class="p-3 mt-5 shadow rounded-4">
+                <h3>Eslatmalar !</h3>
+                <div class="row my-3 border-bottom">
+                  <div class="col-sm-2 col-xl-3 d-flex align-items-center">
+                    <img src="/images/star.png" alt="icon" />
+                    <b class="fs-3 ms-2">10</b>
+                  </div>
+                  <div class="col-sm-10 col-xl-9">
+                    <p class="m-0">
+                      Padding marginlarni yaxshilab tushinib olish kerak,
+                      UI&UX haqida ko’proq dars qilish zarur
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-3 border-bottom">
+                  <div class="col-sm-2 col-xl-3 d-flex align-items-center">
+                    <img src="/images/star.png" alt="icon" />
+                    <b class="fs-3 ms-2">10</b>
+                  </div>
+                  <div class="col-sm-10 col-xl-9">
+                    <p class="m-0">
+                      Padding marginlarni yaxshilab tushinib olish kerak,
+                      UI&UX haqida ko’proq dars qilish zarur
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-3 border-bottom">
+                  <div class="col-sm-2 col-xl-3 d-flex align-items-center">
+                    <img src="/images/star.png" alt="icon" />
+                    <b class="fs-3 ms-2">10</b>
+                  </div>
+                  <div class="col-sm-10 col-xl-9">
+                    <p class="m-0">
+                      Padding marginlarni yaxshilab tushinib olish kerak,
+                      UI&UX haqida ko’proq dars qilish zarur
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-3 border-bottom">
+                  <div class="col-sm-2 col-xl-3 d-flex align-items-center">
+                    <img src="/images/star.png" alt="icon" />
+                    <b class="fs-3 ms-2">10</b>
+                  </div>
+                  <div class="col-sm-10 col-xl-9">
+                    <p class="m-0">
+                      Padding marginlarni yaxshilab tushinib olish kerak,
+                      UI&UX haqida ko’proq dars qilish zarur
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer start -->
+  <footer class="py-4 border-top border-2">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <span>RoboCode IT Academy 2023</span>
+
+        <div class="icons d-flex align-items-center">
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/facebook-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/instagram-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/telegram-icon.png" alt="icon" />
+          </a>
+          <a class="text-decoration-none mx-2" href="#">
+            <img src="/images/youtube-icon.png" alt="icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header flex-column text-center">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Loyiha qo’shish formasi
+          </h1>
+          <p>
+            Faqat 100% yakunlangan va serverga joylashtirilgan o’zining URL
+            manziliga ega ishlarni qo’shish mumkin.
+          </p>
+        </div>
+        <div class="modal-body">
+          <form method="post" id="addProject">
+            <input class="form-control p-3 my-3" type="text" placeholder="Loyiha nomi" required />
+            <input class="form-control p-3 my-3" type="text" placeholder="Link" required />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" form="addProject" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Qo’shish
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================= -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            Loyiha moderatorga yuborildi!
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Moderator loyihani tekshirishi bilan loyiha sizning profilingizga
+          qo’shiladi.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            Tahrirlash formasi
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post">
+            {% csrf_token %}
+
+            <div class="form-floating my-2">
+              <input type="text" class="form-control" id="floatingName" placeholder="Ism" required />
+              <label for="floatingName">Ism</label>
+            </div>
+            <div class="form-floating my-2">
+              <input type="text" class="form-control" id="floatingLastname" placeholder="Familya" required />
+              <label for="floatingLastname">Familya</label>
+            </div>
+            <div class="form-floating my-2">
+              <input type="date" class="form-control" id="floatingDate" placeholder="Tug’ilgan sana" required />
+              <label class="py-2" for="floatingDate">Tug’ilgan sana</label>
+            </div>
+            <div class="form-floating my-2">
+              <input type="file" class="form-control" id="floatingFile" placeholder="Rasm" required />
+              <label class="py-2" for="floatingFile">Rasm</label>
+            </div>
+            <div class="form-floating my-2">
+              <input type="text" class="form-control" id="floatingFacebook" placeholder="Facebook link" required />
+              <label for="floatingFacebook">Facebook link</label>
+            </div>
+            <div class="form-floating my-2">
+              <input type="text" class="form-control" id="floatingInstagram" placeholder="Instagram link" required />
+              <label for="floatingInstagram">Instagram link</label>
+            </div>
+            <div class="form-floating my-2">
+              <input type="text" class="form-control" id="floatingTelegram" placeholder="Telegram link" required />
+              <label for="floatingTelegram">Telegram link</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Saqlash</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
